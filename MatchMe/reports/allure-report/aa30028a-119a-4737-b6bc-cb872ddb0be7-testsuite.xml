@@ -1,0 +1,184 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1527501558404" stop="1527501860918">
+  <name>tests.Test_Case1</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1527501558404" status="broken" stop="1527501860607">
+      <description>
+        Complete end to end testing of Level 1
+        </description>
+      <name>Test_Case1.test_01</name>
+      <failure>
+        <message>BadStatusLine: ''</message>
+        <stack-trace>self = &lt;class tests.Test_Case1.Test_Case1 at 0x047353E8&gt;
+
+    @classmethod
+    def setup_class(self):
+        self.desired_caps = {}
+        if (self.platform == "android"):
+    
+            self.desired_caps['testobject_api_key'] = 'C9205C289DC34A0E8EF9B3B29154766F'
+            self.desired_caps['platformName'] = 'Android'
+            self.desired_caps['deviceName'] = 'Motorola_Moto_E2_real_us'
+            self.desired_caps['platformVersion']='5.1'
+            self.desired_caps['phoneOnly']='false'
+            self.desired_caps['tabletOnly']='false'
+            self.desired_caps['privateDevicesOnly']='false'
+            self.desired_caps['appiumVersion']='1.8.0'
+            self.desired_caps['newCommandTimeout'] = 400
+            #self.desired_caps['app'] = PATH('../../../match.apk')
+        else:
+            self.desired_caps['platformName'] = 'iOS'
+            self.desired_caps['deviceName'] = 'iPhone8'
+            self.desired_caps['automationName'] = 'XCUITest'
+            self.desired_caps['app'] = PATH('../../../match.ipa')
+    
+&gt;       self.driver = webdriver.Remote('https://us1.appium.testobject.com/wd/hub', self.desired_caps)
+
+generics\BaseTest.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\python27\lib\site-packages\appium\webdriver\webdriver.py:36: in __init__
+    super(WebDriver, self).__init__(command_executor, desired_capabilities, browser_profile, proxy, keep_alive)
+c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py:154: in __init__
+    self.start_session(desired_capabilities, browser_profile)
+c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py:243: in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py:310: in execute
+    response = self.command_executor.execute(driver_command, params)
+c:\python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py:466: in execute
+    return self._request(command_info[0], url, body=data)
+c:\python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py:528: in _request
+    resp = opener.open(request, timeout=self._timeout)
+c:\python27\lib\urllib2.py:429: in open
+    response = self._open(req, data)
+c:\python27\lib\urllib2.py:447: in _open
+    '_open', req)
+c:\python27\lib\urllib2.py:407: in _call_chain
+    result = func(*args)
+c:\python27\lib\urllib2.py:1241: in https_open
+    context=self._context)
+c:\python27\lib\urllib2.py:1201: in do_open
+    r = h.getresponse(buffering=True)
+c:\python27\lib\httplib.py:1121: in getresponse
+    response.begin()
+c:\python27\lib\httplib.py:438: in begin
+    version, status, reason = self._read_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;httplib.HTTPResponse instance at 0x04A96670&gt;
+
+    def _read_status(self):
+        # Initialize with Simple-Response defaults
+        line = self.fp.readline(_MAXLINE + 1)
+        if len(line) &gt; _MAXLINE:
+            raise LineTooLong("header line")
+        if self.debuglevel &gt; 0:
+            print "reply:", repr(line)
+        if not line:
+            # Presumably, the server closed the connection before
+            # sending a valid response.
+&gt;           raise BadStatusLine(line)
+E           BadStatusLine: ''
+
+c:\python27\lib\httplib.py:402: BadStatusLine</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="10560-MainThread"/>
+        <label name="host" value="TYSS-MF-034"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1527501860733" status="broken" stop="1527501860918">
+      <description>
+        Complete end to end testing of Level 2
+        </description>
+      <name>Test_Case1.test_02</name>
+      <failure>
+        <message>BadStatusLine: ''</message>
+        <stack-trace>self = &lt;class tests.Test_Case1.Test_Case1 at 0x047353E8&gt;
+
+    @classmethod
+    def setup_class(self):
+        self.desired_caps = {}
+        if (self.platform == "android"):
+    
+            self.desired_caps['testobject_api_key'] = 'C9205C289DC34A0E8EF9B3B29154766F'
+            self.desired_caps['platformName'] = 'Android'
+            self.desired_caps['deviceName'] = 'Motorola_Moto_E2_real_us'
+            self.desired_caps['platformVersion']='5.1'
+            self.desired_caps['phoneOnly']='false'
+            self.desired_caps['tabletOnly']='false'
+            self.desired_caps['privateDevicesOnly']='false'
+            self.desired_caps['appiumVersion']='1.8.0'
+            self.desired_caps['newCommandTimeout'] = 400
+            #self.desired_caps['app'] = PATH('../../../match.apk')
+        else:
+            self.desired_caps['platformName'] = 'iOS'
+            self.desired_caps['deviceName'] = 'iPhone8'
+            self.desired_caps['automationName'] = 'XCUITest'
+            self.desired_caps['app'] = PATH('../../../match.ipa')
+    
+&gt;       self.driver = webdriver.Remote('https://us1.appium.testobject.com/wd/hub', self.desired_caps)
+
+generics\BaseTest.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\python27\lib\site-packages\appium\webdriver\webdriver.py:36: in __init__
+    super(WebDriver, self).__init__(command_executor, desired_capabilities, browser_profile, proxy, keep_alive)
+c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py:154: in __init__
+    self.start_session(desired_capabilities, browser_profile)
+c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py:243: in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+c:\python27\lib\site-packages\selenium\webdriver\remote\webdriver.py:310: in execute
+    response = self.command_executor.execute(driver_command, params)
+c:\python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py:466: in execute
+    return self._request(command_info[0], url, body=data)
+c:\python27\lib\site-packages\selenium\webdriver\remote\remote_connection.py:528: in _request
+    resp = opener.open(request, timeout=self._timeout)
+c:\python27\lib\urllib2.py:429: in open
+    response = self._open(req, data)
+c:\python27\lib\urllib2.py:447: in _open
+    '_open', req)
+c:\python27\lib\urllib2.py:407: in _call_chain
+    result = func(*args)
+c:\python27\lib\urllib2.py:1241: in https_open
+    context=self._context)
+c:\python27\lib\urllib2.py:1201: in do_open
+    r = h.getresponse(buffering=True)
+c:\python27\lib\httplib.py:1121: in getresponse
+    response.begin()
+c:\python27\lib\httplib.py:438: in begin
+    version, status, reason = self._read_status()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;httplib.HTTPResponse instance at 0x04A96670&gt;
+
+    def _read_status(self):
+        # Initialize with Simple-Response defaults
+        line = self.fp.readline(_MAXLINE + 1)
+        if len(line) &gt; _MAXLINE:
+            raise LineTooLong("header line")
+        if self.debuglevel &gt; 0:
+            print "reply:", repr(line)
+        if not line:
+            # Presumably, the server closed the connection before
+            # sending a valid response.
+&gt;           raise BadStatusLine(line)
+E           BadStatusLine: ''
+
+c:\python27\lib\httplib.py:402: BadStatusLine</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="10560-MainThread"/>
+        <label name="host" value="TYSS-MF-034"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython2"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
